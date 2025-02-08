@@ -60,9 +60,9 @@ resource "aws_launch_template" "luit-launch-template" {
     <<-EOF
     #!/bin/bash
     sudo apt update -y
-    sudo apt install httpd -y
-    sudo systemctl start httpd
-    sudo systemctl enable httpd
+    sudo apt install apache2 -y
+    sudo systemctl start apache2
+    sudo systemctl enable apache2
     EOF
   )
 }
