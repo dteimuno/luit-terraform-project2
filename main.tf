@@ -72,8 +72,8 @@ resource "aws_launch_template" "luit-launch-template" {
 resource "aws_autoscaling_group" "luit-asg" {
   availability_zones        = ["us-east-1a", "us-east-1b"]
   desired_capacity          = 2
-  max_size                  = 2
-  min_size                  = 5
+  max_size                  = 5
+  min_size                  = 2
   health_check_grace_period = 300
   force_delete              = true
 
